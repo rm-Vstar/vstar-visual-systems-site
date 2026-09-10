@@ -15,11 +15,12 @@
         var stored = localStorage.getItem('vstar-theme');
         var mode = stored || 'auto';
         var dark = mode === 'dark' || (mode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
-        if (dark) document.documentElement.dataset.theme = 'dark';
+        // Set explicitly for both themes: the token bridge keys off [data-theme].
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
       } catch (e) { /* storage unavailable */ }
     </script>
-    <script type="module" crossorigin src="./assets/index-CdB9XzXs.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-_OBVpqQt.css">
+    <script type="module" crossorigin src="./assets/index-CRKXaEdM.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-fLJ31YV6.css">
   </head>
   <body>
     <div id="root"></div>
