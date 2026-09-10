@@ -9,15 +9,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" />
     <script>
-      // Apply the stored theme before first paint to avoid a light-mode flash (FOUC).
+      // Apply the theme before first paint to avoid a flash of the wrong theme.
+      // Stored modes: 'auto' (follow the system), 'light', 'dark'. Legacy 'dark'/'light' values are honored.
       try {
-        if (localStorage.getItem('vstar-theme') === 'dark') {
-          document.documentElement.dataset.theme = 'dark';
-        }
+        var stored = localStorage.getItem('vstar-theme');
+        var mode = stored || 'auto';
+        var dark = mode === 'dark' || (mode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) document.documentElement.dataset.theme = 'dark';
       } catch (e) { /* storage unavailable */ }
     </script>
-    <script type="module" crossorigin src="./assets/index-CS4v7cYW.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CkXeeraD.css">
+    <script type="module" crossorigin src="./assets/index-De4F92xr.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DSZTywLM.css">
   </head>
   <body>
     <div id="root"></div>
