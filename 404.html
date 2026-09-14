@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 — VSTAR / Visual Systems</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" />
+    <style>
+      :root {
+        --blue: #1b6bff;
+        --orange: #ff7a1a;
+        --ink: #0b0f14;
+        --paper: #f4f5f7;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { height: 100%; }
+      body {
+        font-family: 'Space Grotesk', system-ui, sans-serif;
+        background: var(--paper);
+        color: var(--ink);
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+      .stage {
+        text-align: center;
+        padding: 0 24px;
+      }
+      .code {
+        font-size: clamp(96px, 22vw, 220px);
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        background: linear-gradient(120deg, var(--blue), var(--orange));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .subtitle {
+        margin-top: 8px;
+        font-size: clamp(20px, 3vw, 32px);
+        font-weight: 500;
+        color: var(--ink);
+        opacity: 0.75;
+      }
+      .home {
+        display: inline-block;
+        margin-top: 40px;
+        padding: 14px 28px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        background: var(--blue);
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+      .home:hover { background: var(--orange); }
+      .brand {
+        margin-top: 56px;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink);
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="stage">
+      <div class="code">404</div>
+      <p class="subtitle">Page not found</p>
+      <a class="home" href="./">Back to home</a>
+      <p class="brand">VSTAR / Visual Systems</p>
+    </main>
+  </body>
+</html>
